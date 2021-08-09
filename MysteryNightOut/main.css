@@ -1,0 +1,36 @@
+/* Primary CSS */
+main > .container {
+  padding: 60px 15px 0;
+}
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+/* Footer background color */
+.footer {
+  background-color: #c9e9f6;
+}
+/* Navbar background color */
+.navbar {
+  background-color: #007bff;
+}
+/* forces navbar menu items to use fade in animation on pageload or when mobile menu is accessed */
+.nav-item {
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+}
+/* defines loadAnimate class to be used to give content the fade in animation */
+.loadAnimate {
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+  }
+/* defines the fadeIn animation */
+@keyframes fadeIn {
+    0%   {opacity:0;}
+    100%   {opacity:1;}
+  }
+/* Use to space body content out */
+.pageSpacing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
