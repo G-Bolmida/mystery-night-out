@@ -3,8 +3,8 @@
   ini_set('display_errors', 1);
   // If moving web hosts credentials below need to be updated for database communication
   $servername = "mysterydb";
-  $username = "";
-  $password = "";
+  $username = "root";
+  $password = "admin";
   $db_name = "mystery";
   // Create connection with DB
   $conn = new mysqli($servername, $username, $password, $db_name);

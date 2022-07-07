@@ -1,0 +1,22 @@
+version: "2"
+services:
+  nginx:
+    image: linuxserver/nginx
+    ports:
+      - 8080:80
+    container_name: mno-webserver
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./MysteryNightOut:/config/www     
+    restart: always
+
+  mariadb:
+    build: .
+    container_name: mysterydb
+    environment:
+      - MARIADB_ROOT_PASSWORD=admin
+      - MARIADB_DATABASE=mystery
+    restart: always
